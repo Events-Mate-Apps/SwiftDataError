@@ -7,18 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5801F8FE2AC575A9004C0BC3 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8F82AC575A9004C0BC3 /* Guest.swift */; };
+		5801F8FF2AC575A9004C0BC3 /* ChecklistCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8F92AC575A9004C0BC3 /* ChecklistCategory.swift */; };
+		5801F9002AC575A9004C0BC3 /* SmallVendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8FA2AC575A9004C0BC3 /* SmallVendor.swift */; };
+		5801F9012AC575A9004C0BC3 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8FB2AC575A9004C0BC3 /* Timeline.swift */; };
+		5801F9022AC575A9004C0BC3 /* Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8FC2AC575A9004C0BC3 /* Wedding.swift */; };
+		5801F9032AC575A9004C0BC3 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5801F8FD2AC575A9004C0BC3 /* Budget.swift */; };
+		5815E4AC2AC58EE300371BF6 /* WeddingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AB2AC58EE300371BF6 /* WeddingDetailView.swift */; };
+		5815E4AE2AC596BB00371BF6 /* SwiftDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AD2AC596BB00371BF6 /* SwiftDataProvider.swift */; };
+		5815E4B02AC596DE00371BF6 /* MyWeddingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AF2AC596DE00371BF6 /* MyWeddingsViewModel.swift */; };
+		589FCFD12AC57862009191FC /* SimpleCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 589FCFD02AC57862009191FC /* SimpleCodable */; };
+		589FCFD32AC57862009191FC /* SimpleCodableClient in Frameworks */ = {isa = PBXBuildFile; productRef = 589FCFD22AC57862009191FC /* SimpleCodableClient */; };
+		589FCFD52AC57907009191FC /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FCFD42AC57907009191FC /* Share.swift */; };
+		589FCFDA2AC58652009191FC /* WeddingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FCFD82AC58652009191FC /* WeddingService.swift */; };
 		58F8F9502AC572BF00C638E1 /* SwiftDataIssueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F94F2AC572BF00C638E1 /* SwiftDataIssueApp.swift */; };
 		58F8F9522AC572BF00C638E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F9512AC572BF00C638E1 /* ContentView.swift */; };
-		58F8F9542AC572BF00C638E1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F9532AC572BF00C638E1 /* Item.swift */; };
 		58F8F9562AC572C100C638E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F9552AC572C100C638E1 /* Assets.xcassets */; };
 		58F8F9592AC572C100C638E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F9582AC572C100C638E1 /* Preview Assets.xcassets */; };
+		58F8F96E2AC573A400C638E1 /* SimpleCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 58F8F96D2AC573A400C638E1 /* SimpleCodable */; };
+		58F8F9702AC573A400C638E1 /* SimpleCodableClient in Frameworks */ = {isa = PBXBuildFile; productRef = 58F8F96F2AC573A400C638E1 /* SimpleCodableClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5801F8F82AC575A9004C0BC3 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		5801F8F92AC575A9004C0BC3 /* ChecklistCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistCategory.swift; sourceTree = "<group>"; };
+		5801F8FA2AC575A9004C0BC3 /* SmallVendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallVendor.swift; sourceTree = "<group>"; };
+		5801F8FB2AC575A9004C0BC3 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		5801F8FC2AC575A9004C0BC3 /* Wedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wedding.swift; sourceTree = "<group>"; };
+		5801F8FD2AC575A9004C0BC3 /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		5815E4AB2AC58EE300371BF6 /* WeddingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingDetailView.swift; sourceTree = "<group>"; };
+		5815E4AD2AC596BB00371BF6 /* SwiftDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataProvider.swift; sourceTree = "<group>"; };
+		5815E4AF2AC596DE00371BF6 /* MyWeddingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWeddingsViewModel.swift; sourceTree = "<group>"; };
+		589FCFD42AC57907009191FC /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		589FCFD82AC58652009191FC /* WeddingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeddingService.swift; sourceTree = "<group>"; };
 		58F8F94C2AC572BF00C638E1 /* SwiftDataIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F8F94F2AC572BF00C638E1 /* SwiftDataIssueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataIssueApp.swift; sourceTree = "<group>"; };
 		58F8F9512AC572BF00C638E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		58F8F9532AC572BF00C638E1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		58F8F9552AC572C100C638E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58F8F9582AC572C100C638E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -28,12 +52,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F8F9702AC573A400C638E1 /* SimpleCodableClient in Frameworks */,
+				58F8F96E2AC573A400C638E1 /* SimpleCodable in Frameworks */,
+				589FCFD32AC57862009191FC /* SimpleCodableClient in Frameworks */,
+				589FCFD12AC57862009191FC /* SimpleCodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		589FCFD62AC5861E009191FC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				589FCFD72AC58652009191FC /* WeddingService */,
+				5815E4AD2AC596BB00371BF6 /* SwiftDataProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		589FCFD72AC58652009191FC /* WeddingService */ = {
+			isa = PBXGroup;
+			children = (
+				589FCFD82AC58652009191FC /* WeddingService.swift */,
+			);
+			path = WeddingService;
+			sourceTree = "<group>";
+		};
 		58F8F9432AC572BF00C638E1 = {
 			isa = PBXGroup;
 			children = (
@@ -53,11 +98,14 @@
 		58F8F94E2AC572BF00C638E1 /* SwiftDataIssue */ = {
 			isa = PBXGroup;
 			children = (
+				589FCFD62AC5861E009191FC /* Service */,
 				58F8F94F2AC572BF00C638E1 /* SwiftDataIssueApp.swift */,
 				58F8F9512AC572BF00C638E1 /* ContentView.swift */,
-				58F8F9532AC572BF00C638E1 /* Item.swift */,
+				5815E4AB2AC58EE300371BF6 /* WeddingDetailView.swift */,
+				58F8F95F2AC572C800C638E1 /* Models */,
 				58F8F9552AC572C100C638E1 /* Assets.xcassets */,
 				58F8F9572AC572C100C638E1 /* Preview Content */,
+				5815E4AF2AC596DE00371BF6 /* MyWeddingsViewModel.swift */,
 			);
 			path = SwiftDataIssue;
 			sourceTree = "<group>";
@@ -68,6 +116,20 @@
 				58F8F9582AC572C100C638E1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		58F8F95F2AC572C800C638E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				589FCFD42AC57907009191FC /* Share.swift */,
+				5801F8FD2AC575A9004C0BC3 /* Budget.swift */,
+				5801F8F82AC575A9004C0BC3 /* Guest.swift */,
+				5801F8F92AC575A9004C0BC3 /* ChecklistCategory.swift */,
+				5801F8FA2AC575A9004C0BC3 /* SmallVendor.swift */,
+				5801F8FB2AC575A9004C0BC3 /* Timeline.swift */,
+				5801F8FC2AC575A9004C0BC3 /* Wedding.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +148,12 @@
 			dependencies = (
 			);
 			name = SwiftDataIssue;
+			packageProductDependencies = (
+				58F8F96D2AC573A400C638E1 /* SimpleCodable */,
+				58F8F96F2AC573A400C638E1 /* SimpleCodableClient */,
+				589FCFD02AC57862009191FC /* SimpleCodable */,
+				589FCFD22AC57862009191FC /* SimpleCodableClient */,
+			);
 			productName = SwiftDataIssue;
 			productReference = 58F8F94C2AC572BF00C638E1 /* SwiftDataIssue.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 58F8F9432AC572BF00C638E1;
+			packageReferences = (
+				589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */,
+			);
 			productRefGroup = 58F8F94D2AC572BF00C638E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,8 +212,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F8F9522AC572BF00C638E1 /* ContentView.swift in Sources */,
-				58F8F9542AC572BF00C638E1 /* Item.swift in Sources */,
+				5801F9012AC575A9004C0BC3 /* Timeline.swift in Sources */,
+				5801F9022AC575A9004C0BC3 /* Wedding.swift in Sources */,
+				5801F8FE2AC575A9004C0BC3 /* Guest.swift in Sources */,
+				589FCFD52AC57907009191FC /* Share.swift in Sources */,
+				589FCFDA2AC58652009191FC /* WeddingService.swift in Sources */,
+				5801F9032AC575A9004C0BC3 /* Budget.swift in Sources */,
 				58F8F9502AC572BF00C638E1 /* SwiftDataIssueApp.swift in Sources */,
+				5801F8FF2AC575A9004C0BC3 /* ChecklistCategory.swift in Sources */,
+				5815E4AC2AC58EE300371BF6 /* WeddingDetailView.swift in Sources */,
+				5815E4B02AC596DE00371BF6 /* MyWeddingsViewModel.swift in Sources */,
+				5815E4AE2AC596BB00371BF6 /* SwiftDataProvider.swift in Sources */,
+				5801F9002AC575A9004C0BC3 /* SmallVendor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +429,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Events-Mate-Apps/SimpleCodableMacro";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		589FCFD02AC57862009191FC /* SimpleCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */;
+			productName = SimpleCodable;
+		};
+		589FCFD22AC57862009191FC /* SimpleCodableClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */;
+			productName = SimpleCodableClient;
+		};
+		58F8F96D2AC573A400C638E1 /* SimpleCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SimpleCodable;
+		};
+		58F8F96F2AC573A400C638E1 /* SimpleCodableClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SimpleCodableClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58F8F9442AC572BF00C638E1 /* Project object */;
 }

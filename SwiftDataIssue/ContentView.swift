@@ -10,46 +10,50 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    var viewModel = MyWeddingsViewModel()
+    
+    @Query private var items: [Wedding]
+    
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                Text("Query number: \(items.count)")
+                Text("VM number: \(viewModel.myWeddings.count)")
+
+                ForEach(viewModel.myWeddings) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        WeddingDetailView(wedding: item)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                        VStack {
+                            Text(item.createdAt, format: Date.FormatStyle(date: .numeric, time: .standard))
+                            Text(item.name)
+                            Text(String(item.guests.count))
+                        }
                     }
                 }
             }
         } detail: {
             Text("Select an item")
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+        .refreshable {
+            viewModel.loadWeddings()
+        }
+        .onAppear {
+            viewModel.loadWeddings()
         }
     }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    private func getItems() {
+        Task {
+            do {
+                let weddings = try await WeddingService().myWeddings
+                
+                for wedding in weddings {
+                    modelContext.insert(wedding)
+                }
+                print(weddings)
+            } catch {
+                print(error)
             }
         }
     }
@@ -57,5 +61,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: Wedding.self, inMemory: true)
 }
