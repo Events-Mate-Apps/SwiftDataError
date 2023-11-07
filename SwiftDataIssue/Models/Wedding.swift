@@ -8,9 +8,7 @@
 import Foundation
 import CoreLocation
 import SwiftData
-import SimpleCodable
-d
-@Codable
+
 @Model
 final class Wedding: Codable, Identifiable, Hashable {
     @Attribute(.unique) let id: UUID
@@ -69,6 +67,65 @@ final class Wedding: Codable, Identifiable, Hashable {
         self.weddingVendors = weddingVendors
         self.user = user
         self.sharedWith = sharedWith
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case location
+        case weddingDate
+        case createdAt
+        case updatedAt
+        case userId
+        case guests
+        case budget
+        case timelines
+        case checklist
+        case selectedVendors
+        case shortlistedVendors
+        case weddingVendors
+        case user
+        case sharedWith
+    }
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(UUID.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.location = try container.decode(LocationPoint.self, forKey: .location)
+        self.weddingDate = try container.decode(Date.self, forKey: .weddingDate)
+        self.createdAt = try container.decode(Date.self, forKey: .createdAt)
+        self.updatedAt = try container.decode(Date.self, forKey: .updatedAt)
+        self.userId = try container.decode(UUID.self, forKey: .userId)
+        self.guests = try container.decode([Guest].self, forKey: .guests)
+        self.budget = try container.decodeIfPresent(Budget.self, forKey: .budget)
+        self.timelines = try container.decode([Timeline].self, forKey: .timelines)
+        self.checklist = try container.decode([ChecklistCategory].self, forKey: .checklist)
+        self.selectedVendors = try container.decode([String].self, forKey: .selectedVendors)
+        self.shortlistedVendors = try container.decode([String].self, forKey: .shortlistedVendors)
+        self.weddingVendors = try container.decode([SmallVendor].self, forKey: .weddingVendors)
+        self.user = try container.decode(UserInfo.self, forKey: .user)
+        self.sharedWith = try container.decode([Share].self, forKey: .sharedWith)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(location, forKey: .location)
+        try container.encode(weddingDate, forKey: .weddingDate)
+        try container.encode(createdAt, forKey: .createdAt)
+        try container.encode(updatedAt, forKey: .updatedAt)
+        try container.encode(userId, forKey: .userId)
+        try container.encode(guests, forKey: .guests)
+        try container.encode(budget, forKey: .budget)
+        try container.encode(timelines, forKey: .timelines)
+        try container.encode(checklist, forKey: .checklist)
+        try container.encode(selectedVendors, forKey: .selectedVendors)
+        try container.encode(shortlistedVendors, forKey: .shortlistedVendors)
+        try container.encode(weddingVendors, forKey: .weddingVendors)
+        try container.encode(user, forKey: .user)
+        try container.encode(sharedWith, forKey: .sharedWith)
     }
 }
 
@@ -142,7 +199,6 @@ extension UserInfo {
 }
 
 @Model
-@Codable
 final class LocationPoint: Codable {
     let type: String
     let coordinates: [Double]
@@ -150,6 +206,23 @@ final class LocationPoint: Codable {
     init(longitude: Double, latitude: Double) {
         type = "Point"
         coordinates = [longitude, latitude]
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case type
+        case coordinates
+    }
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.type = try container.decode(String.self, forKey: .type)
+        self.coordinates = try container.decode([Double].self, forKey: .coordinates)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(type, forKey: .type)
+        try container.encode(coordinates, forKey: .coordinates)
     }
 }
 

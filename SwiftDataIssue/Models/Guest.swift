@@ -7,10 +7,8 @@
 
 import Foundation
 import SwiftData
-import SimpleCodable
 
 @Model
-@Codable
 public final class Guest: Codable, Identifiable {
     @Attribute(.unique) public let id: UUID
     let weddingId: UUID = UUID()
@@ -81,6 +79,83 @@ public final class Guest: Codable, Identifiable {
         self.status = status
         self.needHotel = needHotel
         self.plusOneOptions = plusOneOptions
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case weddingId
+        case weddingGuest
+        case createdAt
+        case updatedAt
+        case email
+        case notes
+        case seat
+        case messageFromGuest
+        case firstName
+        case lastName
+        case phone
+        case address
+        case postalAddress
+        case latitude
+        case longitude
+        case allergens
+        case diets
+        case age
+        case status
+        case needHotel
+        case plusOneOptions
+    }
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(UUID.self, forKey: .id)
+        self.weddingId = try container.decode(UUID.self, forKey: .weddingId)
+        self.weddingGuest = try container.decodeIfPresent(Wedding.self, forKey: .weddingGuest)
+        self.createdAt = try container.decode(Date.self, forKey: .createdAt)
+        self.updatedAt = try container.decode(Date.self, forKey: .updatedAt)
+        self.email = try container.decodeIfPresent(String.self, forKey: .email)
+        self.notes = try container.decodeIfPresent(String.self, forKey: .notes)
+        self.seat = try container.decodeIfPresent(String.self, forKey: .seat)
+        self.messageFromGuest = try container.decodeIfPresent(String.self, forKey: .messageFromGuest)
+        self.firstName = try container.decode(String.self, forKey: .firstName)
+        self.lastName = try container.decode(String.self, forKey: .lastName)
+        self.phone = try container.decodeIfPresent(String.self, forKey: .phone)
+        self.address = try container.decodeIfPresent(Address.self, forKey: .address)
+        self.postalAddress = try container.decodeIfPresent(String.self, forKey: .postalAddress)
+        self.latitude = try container.decodeIfPresent(Double.self, forKey: .latitude)
+        self.longitude = try container.decodeIfPresent(Double.self, forKey: .longitude)
+        self.allergens = try container.decodeIfPresent([String].self, forKey: .allergens)
+        self.diets = try container.decodeIfPresent([String].self, forKey: .diets)
+        self.age = try container.decode(GuestAge.self, forKey: .age)
+        self.status = try container.decode(InvitationStatus.self, forKey: .status)
+        self.needHotel = try container.decode(Bool.self, forKey: .needHotel)
+        self.plusOneOptions = try container.decode(Int.self, forKey: .plusOneOptions)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(weddingId, forKey: .weddingId)
+        try container.encode(weddingGuest, forKey: .weddingGuest)
+        try container.encode(createdAt, forKey: .createdAt)
+        try container.encode(updatedAt, forKey: .updatedAt)
+        try container.encode(email, forKey: .email)
+        try container.encode(notes, forKey: .notes)
+        try container.encode(seat, forKey: .seat)
+        try container.encode(messageFromGuest, forKey: .messageFromGuest)
+        try container.encode(firstName, forKey: .firstName)
+        try container.encode(lastName, forKey: .lastName)
+        try container.encode(phone, forKey: .phone)
+        try container.encode(address, forKey: .address)
+        try container.encode(postalAddress, forKey: .postalAddress)
+        try container.encode(latitude, forKey: .latitude)
+        try container.encode(longitude, forKey: .longitude)
+        try container.encode(allergens, forKey: .allergens)
+        try container.encode(diets, forKey: .diets)
+        try container.encode(age, forKey: .age)
+        try container.encode(status, forKey: .status)
+        try container.encode(needHotel, forKey: .needHotel)
+        try container.encode(plusOneOptions, forKey: .plusOneOptions)
     }
 }
 

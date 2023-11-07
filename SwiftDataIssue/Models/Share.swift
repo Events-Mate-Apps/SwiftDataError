@@ -7,10 +7,8 @@
 
 import Foundation
 import SwiftData
-import SimpleCodable
 
 @Model
-@Codable
 final class Share: Codable, Identifiable {
     @Attribute(.unique) let id: UUID
     let email: String
@@ -56,6 +54,55 @@ final class Share: Codable, Identifiable {
         self.updatedAt = updatedAt
     }
     
+    enum CodingKeys: String, CodingKey {
+        case id
+        case email
+        case budgetPermission
+        case checklistPermission
+        case guestsPermission
+        case timelinesPermission
+        case vendorsPermission
+        case status
+        case weddingId
+        case weddingShare
+        case userId
+        case createdAt
+        case updatedAt
+    }
+
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try container.decode(UUID.self, forKey: .id)
+        self.email = try container.decode(String.self, forKey: .email)
+        self.budgetPermission = try container.decode(Permission.self, forKey: .budgetPermission)
+        self.checklistPermission = try container.decode(Permission.self, forKey: .checklistPermission)
+        self.guestsPermission = try container.decode(Permission.self, forKey: .guestsPermission)
+        self.timelinesPermission = try container.decode(Permission.self, forKey: .timelinesPermission)
+        self.vendorsPermission = try container.decode(Permission.self, forKey: .vendorsPermission)
+        self.status = try container.decode(Status.self, forKey: .status)
+        self.weddingId = try container.decode(String.self, forKey: .weddingId)
+        self.weddingShare = try container.decodeIfPresent(Wedding.self, forKey: .weddingShare)
+        self.userId = try container.decodeIfPresent(String.self, forKey: .userId)
+        self.createdAt = try container.decode(Date.self, forKey: .createdAt)
+        self.updatedAt = try container.decode(Date.self, forKey: .updatedAt)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(email, forKey: .email)
+        try container.encode(budgetPermission, forKey: .budgetPermission)
+        try container.encode(checklistPermission, forKey: .checklistPermission)
+        try container.encode(guestsPermission, forKey: .guestsPermission)
+        try container.encode(timelinesPermission, forKey: .timelinesPermission)
+        try container.encode(vendorsPermission, forKey: .vendorsPermission)
+        try container.encode(status, forKey: .status)
+        try container.encode(weddingId, forKey: .weddingId)
+        try container.encode(weddingShare, forKey: .weddingShare)
+        try container.encode(userId, forKey: .userId)
+        try container.encode(createdAt, forKey: .createdAt)
+        try container.encode(updatedAt, forKey: .updatedAt)
+    }
 }
 
 extension Share {

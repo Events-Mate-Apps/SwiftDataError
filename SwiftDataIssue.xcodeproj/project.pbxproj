@@ -16,16 +16,12 @@
 		5815E4AC2AC58EE300371BF6 /* WeddingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AB2AC58EE300371BF6 /* WeddingDetailView.swift */; };
 		5815E4AE2AC596BB00371BF6 /* SwiftDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AD2AC596BB00371BF6 /* SwiftDataProvider.swift */; };
 		5815E4B02AC596DE00371BF6 /* MyWeddingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815E4AF2AC596DE00371BF6 /* MyWeddingsViewModel.swift */; };
-		589FCFD12AC57862009191FC /* SimpleCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 589FCFD02AC57862009191FC /* SimpleCodable */; };
-		589FCFD32AC57862009191FC /* SimpleCodableClient in Frameworks */ = {isa = PBXBuildFile; productRef = 589FCFD22AC57862009191FC /* SimpleCodableClient */; };
 		589FCFD52AC57907009191FC /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FCFD42AC57907009191FC /* Share.swift */; };
 		589FCFDA2AC58652009191FC /* WeddingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FCFD82AC58652009191FC /* WeddingService.swift */; };
 		58F8F9502AC572BF00C638E1 /* SwiftDataIssueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F94F2AC572BF00C638E1 /* SwiftDataIssueApp.swift */; };
 		58F8F9522AC572BF00C638E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F8F9512AC572BF00C638E1 /* ContentView.swift */; };
 		58F8F9562AC572C100C638E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F9552AC572C100C638E1 /* Assets.xcassets */; };
 		58F8F9592AC572C100C638E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F8F9582AC572C100C638E1 /* Preview Assets.xcassets */; };
-		58F8F96E2AC573A400C638E1 /* SimpleCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 58F8F96D2AC573A400C638E1 /* SimpleCodable */; };
-		58F8F9702AC573A400C638E1 /* SimpleCodableClient in Frameworks */ = {isa = PBXBuildFile; productRef = 58F8F96F2AC573A400C638E1 /* SimpleCodableClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,10 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F8F9702AC573A400C638E1 /* SimpleCodableClient in Frameworks */,
-				58F8F96E2AC573A400C638E1 /* SimpleCodable in Frameworks */,
-				589FCFD32AC57862009191FC /* SimpleCodableClient in Frameworks */,
-				589FCFD12AC57862009191FC /* SimpleCodable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,10 +141,6 @@
 			);
 			name = SwiftDataIssue;
 			packageProductDependencies = (
-				58F8F96D2AC573A400C638E1 /* SimpleCodable */,
-				58F8F96F2AC573A400C638E1 /* SimpleCodableClient */,
-				589FCFD02AC57862009191FC /* SimpleCodable */,
-				589FCFD22AC57862009191FC /* SimpleCodableClient */,
 			);
 			productName = SwiftDataIssue;
 			productReference = 58F8F94C2AC572BF00C638E1 /* SwiftDataIssue.app */;
@@ -183,7 +171,6 @@
 			);
 			mainGroup = 58F8F9432AC572BF00C638E1;
 			packageReferences = (
-				589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */,
 			);
 			productRefGroup = 58F8F94D2AC572BF00C638E1 /* Products */;
 			projectDirPath = "";
@@ -429,38 +416,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Events-Mate-Apps/SimpleCodableMacro";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		589FCFD02AC57862009191FC /* SimpleCodable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */;
-			productName = SimpleCodable;
-		};
-		589FCFD22AC57862009191FC /* SimpleCodableClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 589FCFCF2AC57862009191FC /* XCRemoteSwiftPackageReference "SimpleCodableMacro" */;
-			productName = SimpleCodableClient;
-		};
-		58F8F96D2AC573A400C638E1 /* SimpleCodable */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SimpleCodable;
-		};
-		58F8F96F2AC573A400C638E1 /* SimpleCodableClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SimpleCodableClient;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58F8F9442AC572BF00C638E1 /* Project object */;
 }
